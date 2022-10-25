@@ -3,16 +3,17 @@
 - Posiamo i documenti sulla scrivania
 
 
-MENTRE i documenti (x) sono > 0
-
-    - SE lo scanner è acceso:
-        TRUE:  - Prendo il documento
+- SE lo scanner è acceso:
+        TRUE:  
               
         FALSE: - Accendo lo scanner
-               - Prendo il documento
-    
+               
+
+MENTRE i documenti (x) sono > 0
+
+    - Prendo il documento
     - Guardo il documento
-    
+
     - SE ha un retro:
         TRUE: - Inserisco il documento rivolto con la facciata A sullo scanner
               - Scannerizzo la facciata A
@@ -21,8 +22,15 @@ MENTRE i documenti (x) sono > 0
     
         FALSE: - Inserisco il documento rivolto con la facciata A sullo scanner
                - Scannerizzo la facciata A
-    
-    - Aggiungo il documento all'archivio
+               
+    SE la scannerizzazione è andata a buon termine:
+       TRUE: - Aggiungo il documento all'archivio
+       
+       FALSE:- Ripeto la scannerizzazione
+
+
     - Rimuovo il documento scannerizzato (x-1)
+    
+    
 
 - Fine compito
