@@ -25,12 +25,16 @@ MENTRE i documenti (x) sono > 0
                
     SE la scannerizzazione è andata a buon termine:
        TRUE: - Aggiungo il documento all'archivio
-       
+
        FALSE:- Ripeto la scannerizzazione
 
 
     - Rimuovo il documento scannerizzato (x-1)
+
+    SE documenti (x) = 0
+      TRUE:  - Fine compito
+
+      FALSE: - Ripeto il ciclo MENTRE
     
     
 
-- Fine compito
